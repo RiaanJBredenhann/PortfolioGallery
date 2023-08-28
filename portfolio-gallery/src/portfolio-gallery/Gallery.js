@@ -12,16 +12,16 @@ function Gallery() {
     const tabsData = ["all", ...new Set(categoryData)];
 
     const filterCategory = (category) => {
-        if (category == "all") {
+        if (category === "all") {
             setData(Data);
             return;
         }
         const filteredData = Data.filter((value) => {
-            return value.category == category;
+            return value.category === category;
         })
         setData(filteredData);
     }
-    
+
     return (
 
         <div className="container">
